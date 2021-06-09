@@ -1,0 +1,84 @@
+<html>
+    <style>
+        h1 {text-align: center; font-family: Georgia; font-size: 36px; font-weight: bold; line-height: 48px}
+        .wrapper {
+        background-color: whitesmoke;
+        list-style-type: none;
+        padding: 0;
+        border-radius: 3px;
+        }
+        .form-row {
+            display: flex;
+            justify-content: flex-end;
+            padding: .5em;
+        }
+        .form-row > label {
+            padding: .5em 1em .5em 0;
+            flex: 1;
+        }
+        .form-row > input {
+            flex: 2;
+        }
+        .form-row > input,
+        .form-row > button {
+            padding: .5em;
+        }
+        .form-row > button {
+        background: rgb(175, 58, 136);
+        color: white;
+        border: 0;
+        }
+    </style>
+    <h1>Routing network traffic based on firewall logs using Machine Learning</h1>
+    <form action="/predict" method="POST">
+        <ul class="wrapper">
+            <li class="form-row">
+                <label for="source_port">Source Port:</label>
+                <input type="text" id="sp" name="source_p"><br>
+            </li>
+            <li class="form-row">
+                <label for="dest_port">Destination Port:</label>
+                <input type="text" id="dp" name="dest_p"><br>
+            </li>
+            <li class="form-row">
+                <label for="nat_source_port">NAT Source Port:</label>
+                <input type="text" id="natsp" name="nat_source_p"><br>
+            </li>
+            <li class="form-row">
+                <label for="nat_dest_port">NAT Destination Port:</label>
+                <input type="text" id="natdp" name="nat_dest_p"><br>
+            </li>
+            <li class="form-row">
+                <label for="bytes">Bytes:</label>
+                <input type="text" id="bts" name="bytes"><br>
+            </li>
+            <li class="form-row">
+                <label for="bytes_sent">Bytes Sent:</label>
+                <input type="text" id="bts_s" name="bts_sent"><br>
+            </li>
+            <li class="form-row">
+                <label for="bytes_received">Bytes Received:</label>
+                <input type="text" id="bts_r" name="bts_received"><br>
+            </li>
+            <li class="form-row">
+                <label for="packets">Packets:</label>
+                <input type="text" id="p" name="pkts"><br>
+            </li>
+            <li class="form-row">
+                <label for="elapsed_time">Elapsed Time (sec):</label>
+                <input type="text" id="time" name="elapsed_t"><br>
+            </li>
+            <li class="form-row">
+                <label for="packets_sent">pkts_sent:</label>
+                <input type="text" id="p_s" name="pkts_sent"><br>
+            </li>
+            <li class="form-row">
+                <label for="packets_received">pkts_received:</label>
+                <input type="text" id="p_r" name="pkts_received"><br>
+            </li>
+            <li class="form-row">
+            <button type="submit">Submit</button>
+            </li>
+      </ul>
+    </form>
+</html>
